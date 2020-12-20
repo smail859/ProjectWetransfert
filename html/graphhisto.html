@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+
+    <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="../css/pagecss.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
+
+    <title>Graphique</title>
+  </head>
+
+
+  <body>
+    <h1>Graphique en courbe</h1>
+    <title>Graphique en courbe</title>
+    <div style="width: 75%;">
+      <canvas id="myChart"></canvas>
+    </div>
+    
+    <div class="head">
+      <div class="navb">
+
+        <a href="smailpage.html" class="header__navbar--menu--link">Accueil</a>
+        <a href="graphhisto.html" class="header__navbar--menu--link">Histogramme</a>
+        <a href="graphsecteur.html" class="header__navbar--menu--link">Graphique secteur</a>
+        
+
+      
+      </div>
+      
+    </div>
+
+    <script>
+      
+      var ctx = document.getElementById('myChart').getContext('2d');
+    var chart = new Chart(ctx, {
+        
+        type: 'bar',
+    
+        
+        data: {
+            labels: ['Semaine 12 en 2020 Lundi', 'Semaine 12 en 2020 Mardi', 'Semaine 12 en 2020 Mercredi', 'Semaine 12 en 2020 Jeudi', 'Semaine 12 en 2020 Vendredi', 'Semaine 12 en 2020 Samedi', 'Semaine 12 en 2020 Dimanche',  ],
+            datasets: [{
+                label: 'nombre de telechargement',
+                backgroundColor: 'rgba(255, 99, 132, 0.35)',
+                borderColor: 'rgb(255, 99, 132)',
+                data: [0, 10, 5, 2, 20, 30, 45]
+            }]
+        },
+    
+        
+        options: {
+            
+        }
+    });
+     
+    </script>
+
+
+  </body>
+</html>
